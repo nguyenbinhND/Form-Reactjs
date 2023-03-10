@@ -9,7 +9,13 @@ const CheckHook = ({ control, text, ...props }) => {
   });
   return (
     <div className=" cursor-pointer text-[8px] flex  items-center">
-      <input type="checkbox" {...field} {...props} className="mr-2" />
+      <input
+        type="checkbox"
+        {...field}
+        {...props}
+        checked={field.value}
+        className="mr-2"
+      />
       <span>{text}</span>
     </div>
   );
